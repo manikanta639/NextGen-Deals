@@ -1,8 +1,8 @@
 const products = [
     {
-        image: "https://d3lopvpsghm5w.cloudfront.net/Screenshot%202025-03-29%20at%206.28.58%E2%80%AFPM.webp?w=100&h=100&fit=crop&auto=format",
-        link: "https://amzn.to/3E0U9aU",
-        number: "#589"
+        image: "https://rukminim2.flixcart.com/image/1200/1047/xif0q/shopsy-headphone/x/7/a/bluetooth-yes-airpod-pro-ax44-earbuds-with-touch-sensor-original-imahatu6jqqykfm6.jpeg?q=60&crop=false",
+        link: "https://extp.in/Nti2Eh",
+        number: "#501"
     },
 ];
 
