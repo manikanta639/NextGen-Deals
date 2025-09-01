@@ -4,6 +4,11 @@ const products = [
         link: "https://extp.in/Nti2Eh",
         number: "#501"
     },
+    {
+        image: "https://rukminim2.flixcart.com/image/1200/1047/xif0q/shopsy-headphone/x/7/a/bluetooth-yes-airpod-pro-ax44-earbuds-with-touch-sensor-original-imahatu6jqqykfm6.jpeg?q=60&crop=false",
+        link: "https://extp.in/Nti2Eh",
+        number: "#501"
+    },
 ];
 
 function renderProducts() {
@@ -39,3 +44,4 @@ function filterProducts() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
