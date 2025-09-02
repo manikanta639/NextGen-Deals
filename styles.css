@@ -211,7 +211,7 @@ header h1 {
 /* WhatsApp Button */
 .whatsapp-btn {
     position: fixed;
-    top: 200px;
+    top: 20px;
     right: 20px;
     background-color: #25D366;
     border-radius: 50%;
@@ -300,6 +300,7 @@ header h1 {
         font-size: 14px;
     }
 }
+
 
 
 
