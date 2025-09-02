@@ -9,29 +9,32 @@
 </head>
 <body>
 
-    <!-- Sticky wrapper -->
-    <div class="sticky-section">
-        <header>
-            <img src="nextgendeals.png" alt="Logo" class="logo" style="border-radius: 10px;">
-            <h1>NextGen Deals</h1>
-        </header>
+    <!-- Logo + Title -->
+    <header>
+        <img src="nextgendeals.png" alt="Logo" class="logo" style="border-radius: 10px;">
+        <h1>NextGen Deals</h1>
+    </header>
 
-        <div class="banner">
-            <h1>Discover amazing products at unbeatable prices!</h1>
-            <div class="bannershop">
-                <button class="cta-btn">Shop Now</button>
-            </div>
-        </div>
 
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Search by name or number..." oninput="filterProducts()">
-        </div>
+    <!-- Banner -->
+
+       <h1>Discover amazing products at unbeatable prices!</h1>
+       <div class="bannershop">
+           <a href="https://amzn.to/3UVvysY" target="_blank">
+               <button class="cta-btn">Shop Now</button>
+           </a>
+       </div>
+
+
+
+    <!-- Sticky Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search by name or number..." oninput="filterProducts()">
     </div>
 
     <!-- Products -->
     <div id="product-container" class="product-grid"></div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
