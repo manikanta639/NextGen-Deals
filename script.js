@@ -10,7 +10,7 @@ const products = [
         subcategory: ["men", "slippers"]
     },
     {
-        name: "Stylish Slippers",
+        name: "Track Pant",
         image: "https://m.media-amazon.com/images/I/51kTVLryj2L._SX679_.jpg",
         link: "https://amzn.to/45OvzoD",
         number: "#101",
@@ -403,4 +403,5 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
