@@ -12,7 +12,7 @@ const products = [
     {
         name: "Track Pant",
         image: "https://m.media-amazon.com/images/I/51kTVLryj2L._SX679_.jpg",
-        link: "https://amzn.to/45OvzoD",
+        link: "https://amzn.to/3JNnqrW",
         number: "#101",
         category: "Clothing",
         subcategory: ["men"]
@@ -403,5 +403,6 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
