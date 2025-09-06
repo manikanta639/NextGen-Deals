@@ -108,7 +108,7 @@ header h1 {
 .categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /*justify-content: center;*/
     margin: 15px 0;
     gap: 10px;
     padding: 0 10px;
@@ -351,6 +351,7 @@ body {
         font-size: 14px;
     }
 }
+
 
 
 
