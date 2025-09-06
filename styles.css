@@ -6,7 +6,6 @@ body {
     text-align: center;
     animation: fadeIn 1s ease-in-out;
     color: white;
-    
 }
 
 @keyframes fadeIn {
@@ -34,28 +33,14 @@ header h1 {
     text-align: center;
 }
 
-/* Banner 
-.banner {
-    margin: 0;
-    padding: 10px;
-    background: black;
-}
-.banner h1 {
-    margin: 0;
-    font-size: 18px;
-}
-.banner p {
-    margin-top: 5px;  
-    margin-bottom: 0;  
-}
-*/
+/* Banner */
 header h1 {
   margin-bottom: 5px; /* reduce space under NextGen Deals */
 }
 
 .banner h4 {
-  margin-top: 0;      /* remove extra space above the message */
-  margin-bottom: 10px; /* optional, keeps some space before button */
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: bold;  
 }
 
@@ -104,23 +89,31 @@ header h1 {
     color: #aaa;
     font-style: italic;
 }
+
 /* Categories */
 .categories {
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: center;*/
     margin: 15px 0;
     gap: 10px;
     padding: 0 10px;
-    border: none;        /* ensure no border */
-    box-shadow: none;    /* ensure no shadow */
+    border: none;
+    box-shadow: none;
+
+    /* ✅ Fix: hide horizontal scrollbar line */
+    overflow-x: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE & Edge */
+}
+.categories::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 
 /* Buttons */
 .categories button {
     padding: 8px 16px;
-    border: none;             /* remove default border */
-    outline: none;            /* remove focus line */
+    border: none;
+    outline: none;
     border-radius: 20px;
     background: #fbff4d;
     color: black;
@@ -128,8 +121,6 @@ header h1 {
     cursor: pointer;
     transition: 0.3s;
 }
-
-/* On hover */
 .categories button:hover {
     background: #00ffe1;
     transform: scale(1.05);
@@ -140,30 +131,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Categories 
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 0;
-    gap: 10px;
-    padding: 0 10px;
-}
-.categories button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    background: #fbff4d;
-    color:black;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.categories button:hover {
-    background: #1e90ff;
-    transform: scale(1.05);
-}*/
-
 /* Subcategories */
 #subcategory-container {
     display: flex;
@@ -172,6 +139,14 @@ body {
     margin: 15px 0;
     gap: 8px;
     padding: 0 10px;
+
+    /* ✅ Fix: hide horizontal scrollbar line */
+    overflow-x: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE & Edge */
+}
+#subcategory-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 #subcategory-container button {
     padding: 6px 14px;
@@ -209,8 +184,6 @@ body {
     transform: translateY(20px);
     animation: cardFade 0.8s ease forwards;
 }
-
-
 @keyframes cardFade {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -351,16 +324,3 @@ body {
         font-size: 14px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
