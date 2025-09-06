@@ -1,22 +1,7 @@
 const products = [
     // Electronics
     //mobiles
-     {
-        name: "Stylish Slippers",
-        image: "https://m.media-amazon.com/images/I/61gpNtVINQL._SY695_.jpg",
-        link: "https://amzn.to/4pcIgkY",
-        number: "#101",
-        category: "footwear",
-        subcategory: ["men", "slippers"]
-    },
-    {
-        name: "Track Pant",
-        image: "https://m.media-amazon.com/images/I/51kTVLryj2L._SX679_.jpg",
-        link: "https://amzn.to/3JNnqrW",
-        number: "#101",
-        category: "Clothing",
-        subcategory: ["men"]
-    },
+
     {
         name: "Iphone 16 Pro Max",
         image: "https://m.media-amazon.com/images/I/31TEA0qrUBL._SX342_SY445_QL70_FMwebp_.jpg",
@@ -403,6 +388,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
