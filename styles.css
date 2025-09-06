@@ -55,6 +55,7 @@ header h1 {
 .banner h4 {
   margin-top: 0;      /* remove extra space above the message */
   margin-bottom: 10px; /* optional, keeps some space before button */
+  font-weight: bold;  
 }
 
 .cta-btn {
@@ -314,6 +315,7 @@ header h1 {
         font-size: 14px;
     }
 }
+
 
 
 
