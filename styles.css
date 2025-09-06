@@ -103,8 +103,43 @@ header h1 {
     color: #aaa;
     font-style: italic;
 }
-
 /* Categories */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 10px;
+    padding: 0 10px;
+    border: none;        /* ensure no border */
+    box-shadow: none;    /* ensure no shadow */
+}
+
+/* Buttons */
+.categories button {
+    padding: 8px 16px;
+    border: none;             /* remove default border */
+    outline: none;            /* remove focus line */
+    border-radius: 20px;
+    background: #fbff4d;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* On hover */
+.categories button:hover {
+    background: #1e90ff;
+    transform: scale(1.05);
+}
+
+/* Remove horizontal scrollbar line */
+body {
+    overflow-x: hidden;
+}
+
+/* Categories 
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -126,7 +161,7 @@ header h1 {
 .categories button:hover {
     background: #1e90ff;
     transform: scale(1.05);
-}
+}*/
 
 /* Subcategories */
 #subcategory-container {
@@ -315,6 +350,7 @@ header h1 {
         font-size: 14px;
     }
 }
+
 
 
 
