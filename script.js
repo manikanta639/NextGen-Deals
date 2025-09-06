@@ -173,7 +173,7 @@ header h1 {
     margin: auto;
 }
 
-.card {
+/*.card {
     background: white;
     padding: 15px;
     border-radius: 15px;
@@ -182,18 +182,36 @@ header h1 {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative; /* needed for product-number */
-}
+}*/
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
-.card img {
+/*.card img {
     width: 100%;
     max-height: 250px;
     object-fit: contain;
     border-radius: 8px;
     margin-bottom: 10px;
+}*/
+.card {
+    background: white;   /* ensures images are visible */
+    width: 100%;         /* card takes available width */
+    min-height: 200px;   /* prevents collapse */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.card img {
+    width: 100%;          /* take full card width */
+    height: auto;         /* keep aspect ratio */
+    max-height: 350px;    /* allow larger images */
+    object-fit: contain;
+    display: block;       /* avoids inline gap issues */
+}
+
 .product-name {
     margin-top: 8px;
     font-size: 15px;
@@ -326,3 +344,4 @@ header h1 {
         font-size: 14px;
     }
 }
+
