@@ -6,7 +6,7 @@ body {
     text-align: center;
     animation: fadeIn 1s ease-in-out;
     color: white;
-    overflow-x: hidden;
+    
 }
 
 @keyframes fadeIn {
@@ -131,7 +131,7 @@ header h1 {
 
 /* On hover */
 .categories button:hover {
-    background: #1e90ff;
+    background: #00ffe1;
     transform: scale(1.05);
 }
 
@@ -351,6 +351,7 @@ body {
         font-size: 14px;
     }
 }
+
 
 
 
