@@ -35,15 +35,13 @@ header h1 {
 
 /* Banner */
 header h1 {
-  margin-bottom: 5px; /* reduce space under NextGen Deals */
+  margin-bottom: 5px;
 }
-
 .banner h4 {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: bold;  
 }
-
 .cta-btn {
     padding: 12px 25px;
     border: none;
@@ -99,17 +97,13 @@ header h1 {
     padding: 0 10px;
     border: none;
     box-shadow: none;
-
-    /* ✅ Fix: hide horizontal scrollbar line */
     overflow-x: auto;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .categories::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
 }
-
-/* Buttons */
 .categories button {
     padding: 8px 16px;
     border: none;
@@ -125,11 +119,7 @@ header h1 {
     background: #00ffe1;
     transform: scale(1.05);
 }
-
-/* Remove horizontal scrollbar line */
-body {
-    overflow-x: hidden;
-}
+body { overflow-x: hidden; }
 
 /* Subcategories */
 #subcategory-container {
@@ -139,14 +129,12 @@ body {
     margin: 15px 0;
     gap: 8px;
     padding: 0 10px;
-
-    /* ✅ Fix: hide horizontal scrollbar line */
     overflow-x: auto;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 #subcategory-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
 }
 #subcategory-container button {
     padding: 6px 14px;
@@ -164,18 +152,18 @@ body {
     box-shadow: 0 6px 12px rgba(255, 213, 79, 0.4);
 }
 
-/* Products Grid */
+/* ✅ Products Grid - smaller cards */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
     padding: 10px;
-    max-width: 1450px;
+    max-width: 1200px;
     margin: auto;
 }
 .card {
     background: #222;
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
@@ -183,6 +171,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: cardFade 0.8s ease forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 @keyframes cardFade {
     from { opacity: 0; transform: translateY(20px); }
@@ -191,12 +180,13 @@ body {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
+/* ✅ Smaller images */
 .card img {
     width: 100%;
-    height: 300px;
-    border-radius: 5px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 .product-number {
     position: absolute;
@@ -207,23 +197,23 @@ body {
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 12px;
 }
 .product-name {
-    margin-top: 8px;
-    font-size: 14px;
+    margin-top: 6px;
+    font-size: 13px;
     font-weight: bold;
 }
 
-/* Buy Now button */
+/* Buy Now button - smaller */
 .buy-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 8px;
+    padding: 6px 14px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: #ff7e5f;
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -256,71 +246,17 @@ body {
     transform: scale(1.1);
 }
 
-/* Utility */
-.hidden {
-    display: none !important;
-}
+.hidden { display: none !important; }
 
-/* =====================
-   RESPONSIVE DESIGN
-   ===================== */
-
-/* Tablets */
+/* Responsive */
 @media (max-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    header h1 {
-        font-size: 20px;
-    }
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
 }
-
-/* Mobile Devices */
 @media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-    header h1 {
-        font-size: 18px;
-    }
-    .banner h1 {
-        font-size: 16px;
-    }
-    #search {
-        width: 95%;
-        font-size: 14px;
-    }
-    .categories, #subcategory-container {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        justify-content: flex-start;
-    }
-    .categories button, #subcategory-container button {
-        flex: 0 0 auto;
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .categories, #subcategory-container { flex-wrap: nowrap; overflow-x: auto; }
 }
-
-/* Small Phones */
 @media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-    .card {
-        font-size: 14px;
-    }
-    .buy-btn {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-    .cta-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
+    .product-grid { grid-template-columns: 1fr; }
+    .buy-btn { padding: 6px 12px; font-size: 12px; }
 }
