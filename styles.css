@@ -33,7 +33,7 @@ header h1 {
     text-align: center;
 }
 
-/* Banner */
+/* Banner 
 .banner {
     margin: 0;
     padding: 10px;
@@ -44,8 +44,17 @@ header h1 {
     font-size: 18px;
 }
 .banner p {
-    margin-top: 5px;   /* reduce the space (you can even set 0) */
-    margin-bottom: 0;  /* optional, keeps it tight */
+    margin-top: 5px;  
+    margin-bottom: 0;  
+}
+*/
+header h1 {
+  margin-bottom: 5px; /* reduce space under NextGen Deals */
+}
+
+.banner h4 {
+  margin-top: 0;      /* remove extra space above the message */
+  margin-bottom: 10px; /* optional, keeps some space before button */
 }
 
 .cta-btn {
@@ -305,6 +314,7 @@ header h1 {
         font-size: 14px;
     }
 }
+
 
 
 
