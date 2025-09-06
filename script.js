@@ -287,8 +287,9 @@ const products = [
     }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 ];
-// ✅ Render products
-function renderProducts(list) {
+
+// Render products dynamically
+function renderProducts(list = products) {
     const container = document.getElementById("product-container");
     container.innerHTML = "";
 
@@ -298,7 +299,9 @@ function renderProducts(list) {
 
         card.innerHTML = `
             <div class="product-number">${product.number}</div>
-            <img src="${product.image}" alt="${product.name}">
+            <a href="${product.link}" target="_blank">
+                <img src="${product.image}" alt="${product.name}" width="150">
+            </a>
             <div class="product-name">${product.name}</div>
             <a href="${product.link}" target="_blank">
                 <button class="buy-btn">Buy Now</button>
@@ -309,25 +312,84 @@ function renderProducts(list) {
     });
 }
 
-// ✅ Search filter
-function filterProducts() {
-    const searchValue = document.getElementById("search").value.toLowerCase();
-    const filtered = products.filter(product =>
-        product.name.toLowerCase().includes(searchValue) ||
-        product.number.includes(searchValue)
+// Filter by main category
+function filterByCategory(category) {
+    const header = document.getElementById("site-header");
+    const banner = document.getElementById("banner");
+    const subcatContainer = document.getElementById("subcategory-container");
+
+    if (category === "all") {
+        renderProducts(products);
+        header.classList.remove("hidden");
+        banner.classList.remove("hidden");
+        subcatContainer.innerHTML = "";
+        return;
+    }
+
+    const filtered = products.filter(p => p.category === category);
+    renderProducts(filtered);
+    header.classList.add("hidden");
+    banner.classList.add("hidden");
+
+    subcatContainer.innerHTML = "";
+
+    // Special handling for footwear
+    if (category === "footwear") {
+        ["men", "women"].forEach(gender => {
+            const btn = document.createElement("button");
+            btn.innerText = gender.charAt(0).toUpperCase() + gender.slice(1);
+            btn.onclick = () => showFootwearSubcategories(gender);
+            subcatContainer.appendChild(btn);
+        });
+    } else {
+        // Generic subcategories
+        const subcats = [...new Set(filtered.flatMap(p => p.subcategory))];
+        subcats.forEach(sc => {
+            const btn = document.createElement("button");
+            btn.innerText = sc.charAt(0).toUpperCase() + sc.slice(1);
+            btn.onclick = () => filterBySubCategory(sc);
+            subcatContainer.appendChild(btn);
+        });
+    }
+}
+
+// Show nested footwear subcategories
+function showFootwearSubcategories(gender) {
+    const subcatContainer = document.getElementById("subcategory-container");
+    subcatContainer.innerHTML = "";
+
+    ["slippers", "shoes"].forEach(type => {
+        const btn = document.createElement("button");
+        btn.innerText = `${gender.charAt(0).toUpperCase() + gender.slice(1)} ${type.charAt(0).toUpperCase() + type.slice(1)}`;
+        btn.onclick = () => {
+            const filtered = products.filter(p => p.category === "footwear" && p.subcategory.includes(gender) && p.subcategory.includes(type));
+            renderProducts(filtered);
+        };
+        subcatContainer.appendChild(btn);
+    });
+}
+
+// Filter by subcategory (generic)
+function filterBySubCategory(subcategory) {
+    const filtered = products.filter(p => 
+        Array.isArray(p.subcategory) ? p.subcategory.includes(subcategory) : p.subcategory === subcategory
     );
     renderProducts(filtered);
 }
 
-// ✅ Category filter
-function filterByCategory(category) {
-    if (category === "all") {
-        renderProducts(products);
-    } else {
-        const filtered = products.filter(p => p.category === category);
-        renderProducts(filtered);
-    }
+// Search function
+function filterProducts() {
+    const query = document.getElementById("search").value.toLowerCase();
+    const filtered = products.filter(
+        p => p.name.toLowerCase().includes(query) || p.number.toLowerCase().includes(query)
+    );
+    renderProducts(filtered);
 }
 
-// Initial render
-renderProducts(products);
+// Initialize products on page load
+document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
+
+
+
+
