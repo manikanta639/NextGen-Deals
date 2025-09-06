@@ -9,6 +9,7 @@ body {
     text-align: center;
     color: white;
     animation: fadeIn 1s ease-in-out;
+    overflow-x: hidden; /* ✅ Prevent unwanted horizontal scroll */
 }
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -92,62 +93,7 @@ header h1 {
 
 /* =====================
    CATEGORIES
-   ===================== 
-.categories {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 15px 0;
-    gap: 10px;
-    padding: 0 10px;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-.categories::-webkit-scrollbar { display: none; }
-.categories button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    background: #fbff4d;
-    color: black;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.categories button:hover {
-    background: #00ffe1;
-    transform: scale(1.05);
-}*
-
-=====================
-   SUBCATEGORIES
-   ===================== 
-#subcategory-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 0;
-    gap: 8px;
-    padding: 0 10px;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-#subcategory-container::-webkit-scrollbar { display: none; }
-#subcategory-container button {
-    padding: 6px 14px;
-    border: none;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #fff176, #ffd54f);
-    color: black;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.25s;
-}
-#subcategory-container button:hover {
-    transform: scale(1.1) translateY(-3px);
-    box-shadow: 0 6px 12px rgba(255,213,79,0.4);
-}*/
-/* Categories */
+   ===================== */
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +103,7 @@ header h1 {
     border: none;
     box-shadow: none;
 
-    /* ✅ Fix: hide horizontal scrollbar line */
+    /* ✅ Hide horizontal scrollbar line */
     overflow-x: auto;
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none; /* IE & Edge */
@@ -165,8 +111,6 @@ header h1 {
 .categories::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
-
-/* Buttons */
 .categories button {
     padding: 8px 16px;
     border: none;
@@ -183,12 +127,9 @@ header h1 {
     transform: scale(1.05);
 }
 
-/* Remove horizontal scrollbar line */
-body {
-    overflow-x: hidden;
-}
-
-/* Subcategories */
+/* =====================
+   SUBCATEGORIES
+   ===================== */
 #subcategory-container {
     display: flex;
     flex-wrap: wrap;
@@ -197,7 +138,7 @@ body {
     gap: 8px;
     padding: 0 10px;
 
-    /* ✅ Fix: hide horizontal scrollbar line */
+    /* ✅ Hide horizontal scrollbar line */
     overflow-x: auto;
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none; /* IE & Edge */
@@ -220,6 +161,7 @@ body {
     transform: scale(1.1) translateY(-3px);
     box-shadow: 0 6px 12px rgba(255, 213, 79, 0.4);
 }
+
 /* =====================
    PRODUCTS GRID
    ===================== */
@@ -302,6 +244,21 @@ body {
     .card img { max-height: 200px; }
 }
 @media (max-width: 480px) {
-    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-grid { grid-template-columns: 1fr; }
     .card img { max-height: 180px; }
+}
+
+/* =====================
+   MOBILE SCROLL FIX
+   ===================== */
+@media (max-width: 768px) {
+    .categories, #subcategory-container {
+        flex-wrap: nowrap;                /* ✅ Force one line */
+        overflow-x: auto;                 /* ✅ Enable horizontal scroll */
+        -webkit-overflow-scrolling: touch;/* ✅ Smooth scrolling on iOS */
+        justify-content: flex-start;
+    }
+    .categories button, #subcategory-container button {
+        flex: 0 0 auto; /* ✅ Prevent shrinking */
+    }
 }
