@@ -92,7 +92,7 @@ header h1 {
 
 /* =====================
    CATEGORIES
-   ===================== */
+   ===================== 
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -116,11 +116,11 @@ header h1 {
 .categories button:hover {
     background: #00ffe1;
     transform: scale(1.05);
-}
+}*
 
-/* =====================
+=====================
    SUBCATEGORIES
-   ===================== */
+   ===================== 
 #subcategory-container {
     display: flex;
     flex-wrap: wrap;
@@ -146,8 +146,80 @@ header h1 {
 #subcategory-container button:hover {
     transform: scale(1.1) translateY(-3px);
     box-shadow: 0 6px 12px rgba(255,213,79,0.4);
+}*/
+/* Categories */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    gap: 10px;
+    padding: 0 10px;
+    border: none;
+    box-shadow: none;
+
+    /* ✅ Fix: hide horizontal scrollbar line */
+    overflow-x: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE & Edge */
+}
+.categories::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 
+/* Buttons */
+.categories button {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #fbff4d;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.categories button:hover {
+    background: #00ffe1;
+    transform: scale(1.05);
+}
+
+/* Remove horizontal scrollbar line */
+body {
+    overflow-x: hidden;
+}
+
+/* Subcategories */
+#subcategory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 8px;
+    padding: 0 10px;
+
+    /* ✅ Fix: hide horizontal scrollbar line */
+    overflow-x: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE & Edge */
+}
+#subcategory-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+#subcategory-container button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fff176, #ffd54f);
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#subcategory-container button:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 213, 79, 0.4);
+}
 /* =====================
    PRODUCTS GRID
    ===================== */
@@ -185,14 +257,14 @@ header h1 {
 }
 .product-number {
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 10px;
+    left: 10px;
     background: #ffcc00;
     color: black;
     font-weight: bold;
-    padding: 4px 10px;
+    padding: 3px 7px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 6px;
 }
 .product-name {
     margin-top: 8px;
