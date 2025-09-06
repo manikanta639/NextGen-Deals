@@ -244,7 +244,7 @@ header h1 {
     .card img { max-height: 200px; }
 }
 @media (max-width: 480px) {
-    .product-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); } /* 2 per row */
     .card img { max-height: 180px; }
 }
 
@@ -262,3 +262,4 @@ header h1 {
         flex: 0 0 auto; /* ✅ Prevent shrinking */
     }
 }
+
