@@ -7,7 +7,7 @@ const products = [
         link: "https://amzn.to/4glU8Na",
         number: "#101",
         category: "electronics",
-        subcategory: ["others"]
+        subcategory: ["chargers"]
     },
     {
         name: "Iphone 16 Pro Max",
@@ -395,6 +395,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
