@@ -1,7 +1,14 @@
 const products = [
     // Electronics
     //mobiles
-
+    {
+        name: "Study Light",
+        image: "https://m.media-amazon.com/images/I/51AdikUvP+L._SL1500_.jpg",
+        link: "https://amzn.to/4glU8Na",
+        number: "#101",
+        category: "electronics",
+        subcategory: ["others"]
+    },
     {
         name: "Iphone 16 Pro Max",
         image: "https://m.media-amazon.com/images/I/31TEA0qrUBL._SX342_SY445_QL70_FMwebp_.jpg",
@@ -388,6 +395,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
