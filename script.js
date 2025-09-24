@@ -1,7 +1,22 @@
 const products = [
     // Electronics
     //mobiles
-   
+      {
+        name: "Iphone 16 Pro Max",
+        image: "https://m.media-amazon.com/images/I/41Gd+BbuO1L.jpg",
+        link: "https://amzn.to/46Sk7c6",
+        number: "#101",
+        category: "electronics",
+        subcategory: ["mobiles"]
+    },
+    {
+        name: "Iphone 16 Pro Max",
+        image: "https://m.media-amazon.com/images/I/71p-XSjhQ4L._SY879_.jpg",
+        link: "https://amzn.to/4nhDIrQ",
+        number: "#101",
+        category: "electronics",
+        subcategory: ["mobiles"]
+    },
     {
         name: "Iphone 16 Pro Max",
         image: "https://m.media-amazon.com/images/I/31TEA0qrUBL._SX342_SY445_QL70_FMwebp_.jpg",
@@ -388,6 +403,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
