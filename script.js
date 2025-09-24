@@ -1,6 +1,14 @@
 const products = [
     // Electronics
     //mobiles
+    {
+        name: "Study Light",
+        image: "https://m.media-amazon.com/images/I/31PWUtehdGL._SX342_SY445_QL70_FMwebp_.jpg",
+        link: "https://amzn.to/428UW2k",
+        number: "#501",
+        category: "homeappliances",
+        subcategory:
+    },
       {
         name: "Geyser",
         image: "https://m.media-amazon.com/images/I/41Gd+BbuO1L.jpg",
@@ -403,6 +411,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
