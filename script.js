@@ -2,17 +2,17 @@ const products = [
     // Electronics
     //mobiles
       {
-        name: "Iphone 16 Pro Max",
+        name: "Geyser",
         image: "https://m.media-amazon.com/images/I/41Gd+BbuO1L.jpg",
-        link: "https://amzn.to/46Sk7c6",
+        link: "https://amzn.to/47ZWgIG",
         number: "#101",
         category: "electronics",
         subcategory: ["mobiles"]
     },
     {
-        name: "Iphone 16 Pro Max",
+        name: "Engine Oil",
         image: "https://m.media-amazon.com/images/I/71p-XSjhQ4L._SY879_.jpg",
-        link: "https://amzn.to/4nhDIrQ",
+        link: "https://amzn.to/46CHCVc",
         number: "#101",
         category: "electronics",
         subcategory: ["mobiles"]
@@ -403,6 +403,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
