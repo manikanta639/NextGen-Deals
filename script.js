@@ -7,7 +7,7 @@ const products = [
         link: "https://amzn.to/428UW2k",
         number: "#501",
         category: "homeappliances",
-        subcategory:
+        subcategory: null
     },
       {
         name: "Geyser",
@@ -411,6 +411,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
