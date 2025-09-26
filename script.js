@@ -286,31 +286,7 @@ const products = [
         subcategory: null
     }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
-   //homeappliances
-    {
-        name: "Study Light",
-        image: "https://m.media-amazon.com/images/I/31PWUtehdGL._SX342_SY445_QL70_FMwebp_.jpg",
-        link: "https://amzn.to/428UW2k",
-        number: "#501",
-        category: "homeappliances",
-        subcategory: null
-    },
-      {
-        name: "Geyser",
-        image: "https://m.media-amazon.com/images/I/41Gd+BbuO1L.jpg",
-        link: "https://amzn.to/47ZWgIG",
-        number: "#101",
-        category: "homeappliances",
-        subcategory: null
-    },
-    {
-        name: "Engine Oil",
-        image: "https://m.media-amazon.com/images/I/71p-XSjhQ4L._SY879_.jpg",
-        link: "https://amzn.to/46CHCVc",
-        number: "#101",
-        category: "homeappliances",
-        subcategory: null
-    }, 
+   
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
 
 ];
