@@ -5,7 +5,7 @@ const products = [
     {
         name: "Iphone 16 Pro Max",
         image: "https://m.media-amazon.com/images/I/31TEA0qrUBL._SX342_SY445_QL70_FMwebp_.jpg",
-        link: "https://amzn.to/4lS4aH1",
+        link: "https://amzn.to/4nRHt7w",
         number: "#101",
         category: "electronics",
         subcategory: ["mobiles"]
@@ -13,7 +13,7 @@ const products = [
     {
         name: "Samsung S25 Ultra",
         image: "https://m.media-amazon.com/images/I/41Z6HmfzIML._SY300_SX300_QL70_FMwebp_.jpg",
-        link: "https://amzn.to/4n9NZGf",
+        link: "https://amzn.to/4myygzK",
         number: "#102",
         category: "electronics",
         subcategory: ["mobiles"]
@@ -21,7 +21,7 @@ const products = [
     {
         name: "Oneplus 13",
         image: "https://m.media-amazon.com/images/I/41h2cTyybzL._SY300_SX300_QL70_FMwebp_.jpg",
-        link: "https://amzn.to/3HNVgfX",
+        link: "https://amzn.to/4mxnmtZ",
         number: "#102",
         category: "electronics",
         subcategory: ["mobiles"]
@@ -29,7 +29,7 @@ const products = [
     {
         name: "Xiaomi 15",
         image: "https://m.media-amazon.com/images/I/31S5OWe5VBL._SY300_SX300_QL70_FMwebp_.jpg",
-        link: "https://amzn.to/47ky5nO",
+        link: "https://amzn.to/4pC1PTL",
         number: "#102",
         category: "electronics",
         subcategory: ["mobiles"]
@@ -418,6 +418,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
