@@ -287,7 +287,7 @@ const products = [
     }
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
    //homeappliances
-   {
+    {
         name: "Study Light",
         image: "https://m.media-amazon.com/images/I/31PWUtehdGL._SX342_SY445_QL70_FMwebp_.jpg",
         link: "https://amzn.to/428UW2k",
@@ -311,6 +311,8 @@ const products = [
         category: "homeappliances",
         subcategory: null
     }, 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+
 ];
 
 // Render products dynamically
@@ -413,6 +415,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
