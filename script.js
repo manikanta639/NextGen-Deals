@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Safari Trolley",
+        image: "https://m.media-amazon.com/images/I/31GTn8d3i2L._SY300_SX300_QL70_FMwebp_.jpg",
+        link: "https://amzn.to/46IyXk2",
+        number: "#101",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "GOBOULT Headphones",
         image: "https://m.media-amazon.com/images/I/71CzM6hiu6L._SL1500_.jpg",
         link: "https://amzn.to/4nimVVG",
@@ -425,6 +433,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
