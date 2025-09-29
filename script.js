@@ -3,7 +3,7 @@ const products = [
     //mobiles
     {
         name: "Safari Trolley",
-        image: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2025/APRIL/30/WH0feuaa_d72aa9d526da417d8db14ebe0573a2db.jpg",
+        image: "https://m.media-amazon.com/images/I/31GTn8d3i2L._SY300_SX300_QL70_FMwebp_.jpg",
         link: "https://amzn.to/46IyXk2",
         number: "#101",
         category: "electronics",
@@ -433,6 +433,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
