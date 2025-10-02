@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Bag",
+        image: "https://m.media-amazon.com/images/I/71El3ZF4vmL._SL1500_.jpg",
+        link: "https://amzn.to/4gNQ0Wu",
+        number: "#101",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Mouse Pad",
         image: "https://m.media-amazon.com/images/I/71myQH6HoLL._SL1200_.jpg",
         link: "https://amzn.to/3W5YoYd",
@@ -473,6 +481,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
