@@ -2,6 +2,46 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Mouse Pad",
+        image: "https://m.media-amazon.com/images/I/71myQH6HoLL._SL1200_.jpg",
+        link: "https://amzn.to/3W5YoYd",
+        number: "#101",
+        category: "electronics",
+        subcategory: null
+    },
+    {
+        name: "Clothes Basket",
+        image: "https://m.media-amazon.com/images/I/81O4ikXReWL._SL1500_.jpg",
+        link: "https://amzn.to/46AQQCQ",
+        number: "#101",
+        category: "electronics",
+        subcategory: null
+    },
+    {
+        name: "Desk Organizer",
+        image: "https://m.media-amazon.com/images/I/61NTWfv92CL._SL1000_.jpg",
+        link: "https://amzn.to/4h1On7R",
+        number: "#101",
+        category: "electronics",
+        subcategory: null
+    },
+    {
+        name: "Laptop Stand",
+        image: "https://m.media-amazon.com/images/I/41fdaPWib+L._SY300_SX300_QL70_FMwebp_.jpg",
+        link: "https://amzn.to/48LU3AF",
+        number: "#101",
+        category: "electronics",
+        subcategory: null
+    },
+    {
+        name: "Extension",
+        image: "https://rukminim2.flixcart.com/image/832/832/xif0q/surge-protector/t/m/t/-original-imah3qydue3fs4yn.jpeg?q=70&crop=false",
+        link: "https://fkrt.co/XZt1Q1",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Safari Trolley",
         image: "https://m.media-amazon.com/images/I/31GTn8d3i2L._SY300_SX300_QL70_FMwebp_.jpg",
         link: "https://amzn.to/46IyXk2",
@@ -433,6 +473,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
