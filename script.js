@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Arm Wrist",
+        image: "https://m.media-amazon.com/images/I/51QXucgy4gL.jpg",
+        link: "https://amzn.to/3VR0f2O",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Extension",
         image: "https://m.media-amazon.com/images/I/41Ms1cV9ndL._SL1200_.jpg",
         link: "https://amzn.to/4o67xfi",
@@ -482,6 +490,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
