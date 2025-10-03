@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Extension",
+        image: "https://m.media-amazon.com/images/I/41Ms1cV9ndL._SL1200_.jpg",
+        link: "https://amzn.to/4o67xfi",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Bag",
         image: "https://m.media-amazon.com/images/I/71El3ZF4vmL._SL1500_.jpg",
         link: "https://amzn.to/4gNQ0Wu",
@@ -41,14 +49,7 @@ const products = [
         category: "electronics",
         subcategory: null
     },
-    {
-        name: "Extension",
-        image: "https://rukminim2.flixcart.com/image/832/832/xif0q/surge-protector/t/m/t/-original-imah3qydue3fs4yn.jpeg?q=70&crop=false",
-        link: "https://fkrt.co/XZt1Q1",
-        number: "#201",
-        category: "electronics",
-        subcategory: null
-    },
+    
     {
         name: "Safari Trolley",
         image: "https://m.media-amazon.com/images/I/31GTn8d3i2L._SY300_SX300_QL70_FMwebp_.jpg",
@@ -481,6 +482,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
