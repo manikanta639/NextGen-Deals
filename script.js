@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "USB Dongle",
+        image: "https://m.media-amazon.com/images/I/31loeF+UusL._SY300_SX300_QL70_FMwebp_.jpg",
+        link: "https://amzn.to/4mLsMlh",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Arm Wrist",
         image: "https://m.media-amazon.com/images/I/51QXucgy4gL.jpg",
         link: "https://amzn.to/3VR0f2O",
@@ -490,6 +498,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
