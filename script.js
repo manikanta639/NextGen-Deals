@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Stove",
+        image: "https://rukminim2.flixcart.com/image/832/832/xif0q/gas-stove/p/k/v/-original-imagrzw3fgpddgyz.jpeg?q=70&crop=false",
+        link: "https://fkrt.co/48XNdp",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "USB Dongle",
         image: "https://m.media-amazon.com/images/I/31loeF+UusL._SY300_SX300_QL70_FMwebp_.jpg",
         link: "https://amzn.to/4mLsMlh",
@@ -498,6 +506,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
