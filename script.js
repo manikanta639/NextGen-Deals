@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "Keyboard",
+        image: "https://m.media-amazon.com/images/I/71zpagGeYYL._SX679_.jpg",
+        link: "https://amzn.to/3WpjDUM",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Stove",
         image: "https://rukminim2.flixcart.com/image/832/832/xif0q/gas-stove/p/k/v/-original-imagrzw3fgpddgyz.jpeg?q=70&crop=false",
         link: "https://fkrt.co/48XNdp",
@@ -506,6 +514,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
