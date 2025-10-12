@@ -2,6 +2,14 @@ const products = [
     // Electronics
     //mobiles
     {
+        name: "S10 Plus Cover",
+        image: "https://m.media-amazon.com/images/I/51mL4Dqx-2L._SL1297_.jpg",
+        link: "https://amzn.to/48lTVrz",
+        number: "#201",
+        category: "electronics",
+        subcategory: null
+    },
+    {
         name: "Keyboard",
         image: "https://m.media-amazon.com/images/I/71zpagGeYYL._SX679_.jpg",
         link: "https://amzn.to/3WpjDUM",
@@ -514,6 +522,7 @@ function filterProducts() {
 
 // Initialize products on page load
 document.addEventListener("DOMContentLoaded", () => renderProducts(products));
+
 
 
 
