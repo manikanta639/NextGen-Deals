@@ -1,3 +1,25 @@
+// Animation Control Functions
+function disableAnimations() {
+  document.body.classList.add('no-animation');
+}
+
+function enableAnimations() {
+  document.body.classList.remove('no-animation');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname;
+  if (
+    path.includes('cart.html') ||
+    path.includes('wishlist.html') ||
+    path.includes('menu.html') ||
+    path.includes('index.html')
+  ) {
+    disableAnimations();
+  } else {
+    enableAnimations();
+  }
+});
 // Sample Product Data
 const products = [
     // Electronics
@@ -648,3 +670,4 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
