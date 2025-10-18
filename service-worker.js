@@ -1,4 +1,4 @@
-const CACHE_NAME = "campusbuys-v1";
+const CACHE_NAME = "nextgendeals-v1";
 const urlsToCache = [
   "/",
   "/index.html",
