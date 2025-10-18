@@ -7,7 +7,7 @@ const products = [
         image: "https://rukminim2.flixcart.com/image/832/832/xif0q/jug/6/g/v/rust-proof-stainless-steel-inner-copper-jug-with-lid-1-5-liter-original-imahgf2fjs9gcz6s.jpeg?q=70&crop=false",
         link: "https://fkrt.co/jDrxKD",
         number: "#1",
-        category: "elecronics",
+        category: "electronics",
         
     },
     {
@@ -263,4 +263,5 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
 
