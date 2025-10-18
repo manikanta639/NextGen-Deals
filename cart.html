@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cart - Campus Buys</title>
+<title>Cart - NextGen Deals</title>
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -17,7 +17,7 @@
 <nav class="bottom-taskbar">
   <a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
   <a href="wishlist.html"><i class="fa fa-heart"></i><span>Wishlist</span></a>
-  <a href="cart.html"><i class="fa fa-shopping-cart"></i><span>Cart</span></a>
+  <a href="cart.html" class="active"><i class="fa fa-shopping-cart"></i><span>Cart</span></a>
   <a href="#"><i class="fa fa-download"></i><span>App</span></a>
   <a href="menu.html"><i class="fa fa-bars"></i><span>Menu</span></a>
 </nav>
@@ -49,19 +49,10 @@ function removeFromCart(index) {
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
-function updateActiveNavLink() {
-  const links = document.querySelectorAll(".bottom-taskbar a");
-  const currentFile = window.location.pathname.split("/").pop();
-  links.forEach(link => {
-    if(link.getAttribute("href") === currentFile) {
-      link.classList.add("active");
-    }
-  });
-}
 window.onload = () => {
   renderCart();
-  updateActiveNavLink();
 };
 </script>
 </body>
 </html>
+
