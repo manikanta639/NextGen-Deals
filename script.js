@@ -9,13 +9,7 @@ const products = [
     number: "#1",
     category: "electronics",
   },
-  {
-    name: "S10 Plus Cover",
-    image: "https://m.media-amazon.com/images/I/51mL4Dqx-2L._SL1297_.jpg",
-    link: "https://amzn.to/48lTVrz",
-    number: "#201",
-    category: "electronics",
-  },
+  
 ];
 
 // ======================
@@ -333,4 +327,5 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
 
