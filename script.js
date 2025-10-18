@@ -25,7 +25,6 @@ function cleanLocalStorage() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-  // Keep only valid items
   cart = cart.filter(item => products.some(p => p.name === item.name));
   wishlist = wishlist.filter(item => products.some(p => p.name === item.name));
 
@@ -65,7 +64,12 @@ function enableAnimations() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
-  if (path.includes("cart.html") || path.includes("wishlist.html") || path.includes("menu.html") || path.includes("index.html")) {
+  if (
+    path.includes("cart.html") ||
+    path.includes("wishlist.html") ||
+    path.includes("menu.html") ||
+    path.includes("index.html")
+  ) {
     disableAnimations();
   } else {
     enableAnimations();
@@ -180,16 +184,42 @@ function removeFromCart(index) {
 }
 
 // ======================
-// FILTER FUNCTIONS
+// CATEGORY FILTER + BACK BUTTON SUPPORT
 // ======================
+let currentCategory = "all";
+
 function filterByCategory(cat) {
-  const filtered = cat === "all" ? products : products.filter(p => p.category === cat);
+  currentCategory = cat;
+  const filtered =
+    cat === "all" ? products : products.filter(p => p.category === cat);
   animatePageTransition(() => renderProducts(filtered));
+
+  // Update browser history
+  history.pushState({ category: cat }, "", `#${cat}`);
 }
 
+// Handle back/forward button
+window.onpopstate = function (event) {
+  if (event.state && event.state.category) {
+    const cat = event.state.category;
+    const filtered =
+      cat === "all" ? products : products.filter(p => p.category === cat);
+    renderProducts(filtered);
+  } else {
+    renderProducts(products);
+  }
+};
+
+// ======================
+// SEARCH FILTER
+// ======================
 function filterProducts() {
   const val = document.getElementById("search").value.toLowerCase();
-  const filtered = products.filter(p => p.name.toLowerCase().includes(val) || (p.number && p.number.toString().includes(val)));
+  const filtered = products.filter(
+    p =>
+      p.name.toLowerCase().includes(val) ||
+      (p.number && p.number.toString().includes(val))
+  );
   animatePageTransition(() => renderProducts(filtered));
 }
 
@@ -213,7 +243,10 @@ function updateActiveNavLink() {
   const links = document.querySelectorAll(".bottom-taskbar a");
   const currentFile = window.location.pathname.split("/").pop();
   links.forEach(link => {
-    if (link.getAttribute("href") === currentFile || (currentFile === "" && link.getAttribute("href") === "index.html")) {
+    if (
+      link.getAttribute("href") === currentFile ||
+      (currentFile === "" && link.getAttribute("href") === "index.html")
+    ) {
       link.classList.add("active");
     }
   });
@@ -228,7 +261,8 @@ function renderWishlist() {
   if (!container) return;
   container.innerHTML = "";
   if (wishlist.length === 0) {
-    container.innerHTML = "<p style='text-align:center; padding:20px;'>No items in wishlist.</p>";
+    container.innerHTML =
+      "<p style='text-align:center; padding:20px;'>No items in wishlist.</p>";
     return;
   }
   wishlist.forEach((p, index) => {
@@ -262,7 +296,8 @@ function renderCart() {
   if (!container) return;
   container.innerHTML = "";
   if (cart.length === 0) {
-    container.innerHTML = "<p style='text-align:center; padding:20px;'>Your cart is empty.</p>";
+    container.innerHTML =
+      "<p style='text-align:center; padding:20px;'>Your cart is empty.</p>";
     return;
   }
   cart.forEach((p, index) => {
@@ -284,10 +319,18 @@ function renderCart() {
 // ON PAGE LOAD
 // ======================
 window.onload = () => {
-  cleanLocalStorage(); // 🧹 remove deleted products
-  if (document.getElementById("product-container")) renderProducts(products);
+  cleanLocalStorage();
+  const hash = window.location.hash.replace("#", "");
+  if (hash && hash !== "all") {
+    filterByCategory(hash);
+  } else if (document.getElementById("product-container")) {
+    renderProducts(products);
+  }
+
   if (document.getElementById("wishlist-products")) renderWishlist();
   if (document.getElementById("cart-products")) renderCart();
+
   updateCartCount();
   updateActiveNavLink();
 };
+
