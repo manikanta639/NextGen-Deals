@@ -1,28 +1,3 @@
-// Animation Control Functions
-function disableAnimations() {
-  document.body.classList.add('no-animation');
-}
-
-function enableAnimations() {
-  document.body.classList.remove('no-animation');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const path = window.location.pathname;
-  if (
-    path.includes('cart.html') ||
-    path.includes('wishlist.html') ||
-    path.includes('menu.html') ||
-    path.includes('index.html')
-  ) {
-    disableAnimations();
-  } else {
-    enableAnimations();
-  }
-});
-
-// Sample Product Data
-
 // Sample Product Data
 const products = [
     // Electronics
@@ -475,6 +450,31 @@ const products = [
 };*/
 
 
+
+
+// Animation Control Functions inserted in middle
+function disableAnimations() {
+  document.body.classList.add('no-animation');
+}
+
+function enableAnimations() {
+  document.body.classList.remove('no-animation');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const path = window.location.pathname;
+  if (
+    path.includes('cart.html') ||
+    path.includes('wishlist.html') ||
+    path.includes('menu.html') ||
+    path.includes('index.html')
+  ) {
+    disableAnimations();
+  } else {
+    enableAnimations();
+  }
+});
+
 // Animation helper for page transitions
 function animatePageTransition(callback) {
   document.body.style.opacity = 0;
@@ -663,4 +663,3 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
-
