@@ -4,6 +4,13 @@
 const products = [
   {
     name: "Water Dispenser",
+    image: "https://m.media-amazon.com/images/I/61N-lN7TneL._SL1500_.jpg",
+    link: "https://amzn.to/3KRidjB",
+    number: "#2",
+    category: "electronics",
+  },
+  {
+    name: "Water Dispenser",
     image: "https://rukminim2.flixcart.com/image/832/832/xif0q/jug/6/g/v/rust-proof-stainless-steel-inner-copper-jug-with-lid-1-5-liter-original-imahgf2fjs9gcz6s.jpeg?q=70&crop=false",
     link: "https://fkrt.co/jDrxKD",
     number: "#1",
@@ -327,5 +334,6 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
 
 
