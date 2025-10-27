@@ -4,7 +4,7 @@
 const products = [
   
   {
-    name: "LED Strip Connectors",
+    name: "LED Connectors",
     image: "https://m.media-amazon.com/images/I/61XApYALIAL._SL1500_.jpg",
     link: "https://www.amazon.in/dp/B0DYK1T3PT?social_share=cm_sw_r_cso_wa_apan_dp_DBVH07SBDVF991Q5B86S&th=1&linkCode=ll1&tag=nextgendea0f0-21&linkId=027b5706758eb2ccdbfc3329bc6f39e0&language=en_IN&ref_=as_li_ss_tl",
     number: "#3",
@@ -342,6 +342,7 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
 
 
 
