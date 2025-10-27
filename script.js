@@ -2,17 +2,25 @@
 // SAMPLE PRODUCT DATA
 // ======================
 const products = [
+  
   {
-    name: "Water Dispenser",
-    image: "https://m.media-amazon.com/images/I/61N-lN7TneL._SL1500_.jpg",
-    link: "https://amzn.to/3KRidjB",
-    number: "#2",
-    category: "electronics",
+    name: "LED Strip Connectors",
+    image: "https://m.media-amazon.com/images/I/61XApYALIAL._SL1500_.jpg",
+    link: "https://www.amazon.in/dp/B0DYK1T3PT?social_share=cm_sw_r_cso_wa_apan_dp_DBVH07SBDVF991Q5B86S&th=1&linkCode=ll1&tag=nextgendea0f0-21&linkId=027b5706758eb2ccdbfc3329bc6f39e0&language=en_IN&ref_=as_li_ss_tl",
+    number: "#3",
+    category: "gadgets",
   },
   {
-    name: "Water Dispenser",
-    image: "https://rukminim2.flixcart.com/image/832/832/xif0q/jug/6/g/v/rust-proof-stainless-steel-inner-copper-jug-with-lid-1-5-liter-original-imahgf2fjs9gcz6s.jpeg?q=70&crop=false",
-    link: "https://fkrt.co/jDrxKD",
+    name: "Beanie Hat ",
+    image: "https://m.media-amazon.com/images/I/61GzVo5PEvL._SX679_.jpg",
+    link: "https://www.amazon.in/dp/B07YHJG42G?social_share=cm_sw_r_cso_wa_apan_dp_5HKCT0S1JGTSS7ZTKV5V&linkCode=ll1&tag=nextgendea0f0-21&linkId=bc484d338d1cb7b0496a437214dce637&language=en_IN&ref_=as_li_ss_tl",
+    number: "#2",
+    category: "gadgets",
+  },
+  {
+    name: "3 Axis Gimbal",
+    image: "https://rukminim2.flixcart.com/image/832/832/xif0q/gimbal/h/e/z/-original-imah9ya5rhrvv9gg.jpeg?q=70&crop=false",
+    link: "https://fkrt.co/SObkt2",
     number: "#1",
     category: "electronics",
   },
@@ -334,6 +342,7 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
 
 
 
