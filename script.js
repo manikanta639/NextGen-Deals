@@ -2,7 +2,8 @@
 // SAMPLE PRODUCT DATA
 // ======================
 const products = [
-  {name: "Oil Dispenser",image: "https://m.media-amazon.com/images/I/81dzIeO48sL._SL1500_.jpg",link: "https://amzn.to/49l0YB8",number: "#4",category: "home appliances",},
+  {name: "Oil Dispenser", image: "https://m.media-amazon.com/images/I/81dzIeO48sL._SL1500_.jpg", link: "https://amzn.to/49l0YB8", number: "#4", category: "home appliances"}
+
   {
     name: "LED Connectors",
     image: "https://m.media-amazon.com/images/I/61XApYALIAL._SL1500_.jpg",
@@ -342,6 +343,7 @@ window.onload = () => {
   updateCartCount();
   updateActiveNavLink();
 };
+
 
 
 
